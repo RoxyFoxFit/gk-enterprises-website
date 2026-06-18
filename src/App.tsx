@@ -742,23 +742,30 @@ function TestimonialsSection() {
 
   const testimonials = [
     {
-      name: 'Rajesh Kumar',
-      position: 'HR Manager, Imperial Auto',
+      name: 'Vishal Kampani',
+      position: 'Executive Vice President, Imperial Auto',
       text: 'G.K. Enterprises has been our trusted uniform supplier for over 5 years. Their quality, timely delivery, and professional service is unmatched. Highly recommended!',
       rating: 5,
     },
     {
-      name: 'Priya Sharma',
-      position: 'Admin Head, Denso Haryana',
+      name: 'Ruchi Arora',
+      position: 'Sr. Manager General Affairs, Denso Haryana',
       text: 'The embroidery work quality is exceptional. They understood our branding requirements perfectly and delivered uniforms that truly represent our company image.',
       rating: 5,
     },
     {
-      name: 'Amit Verma',
-      position: 'Procurement Manager, Studds',
+      name: 'Mohan Dipak',
+      position: 'Managing Director, Dipak Studios',
       text: 'From industrial safety wear to corporate uniforms, G.K. Enterprises handles all our uniform needs efficiently. Their team is responsive and helpful.',
       rating: 5,
     },
+    {
+      name: 'Rahul sahdev',
+      position: 'CEO & MD at SAR Televenture Ltd ',
+      text: 'Excellent quality uniforms with perfect fitting and timely delivery. Highly satisfied with the service and professionalism. Would definitely recommend!',
+      rating: 5,
+    },
+
   ];
 
   const next = () => setCurrent((c) => (c + 1) % testimonials.length);
