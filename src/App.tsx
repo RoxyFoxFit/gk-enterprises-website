@@ -630,14 +630,77 @@ function Package({ size = 24, className, ...props }: PackageProps) {
 }
 
 // Clients Section
+type ClientLogoProps = {
+  name: string;
+  logo?: string;
+  location?: string;
+  initials?: string;
+};
+
+function ClientLogoCard({ name, logo, location, initials }: ClientLogoProps) {
+  const [hasLogo, setHasLogo] = useState(Boolean(logo));
+  const displayInitials = initials ?? name
+    .split(/\s+/)
+    .filter(Boolean)
+    .slice(0, 3)
+    .map((word) => word[0])
+    .join('')
+    .toUpperCase();
+
+  return (
+    <motion.div
+      whileHover={{ y: -4 }}
+      className="group h-full min-h-[150px] bg-white rounded-xl shadow-md border border-gray-100 p-5 flex flex-col items-center justify-between text-center hover:shadow-lg transition-all"
+    >
+      <div className="h-16 w-full flex items-center justify-center">
+        {logo && hasLogo ? (
+          <img
+            src={logo}
+            alt={`${name} logo`}
+            loading="lazy"
+            referrerPolicy="no-referrer"
+            onError={() => setHasLogo(false)}
+            className="max-h-14 max-w-[150px] object-contain grayscale group-hover:grayscale-0 transition-all"
+          />
+        ) : (
+          <div className="w-14 h-14 rounded-xl bg-secondary-900 text-white flex items-center justify-center font-bold text-sm tracking-wide">
+            {displayInitials}
+          </div>
+        )}
+      </div>
+      <div>
+        <h3 className="font-semibold text-secondary-900 text-sm leading-snug">{name}</h3>
+        {location && <p className="text-xs text-secondary-500 mt-1">{location}</p>}
+      </div>
+    </motion.div>
+  );
+}
+
 function ClientsSection() {
   const clients = [
-    'Imperial Auto', 'Denso Haryana', 'Victora Auto', 'Sledge Hammer',
-    'Studds', 'Tata Steel', 'Honda', 'Dipak Color Studio'
+    { name: 'Imperial Auto', logo: '/client-logos/imperial-auto.jpeg' },
+    { name: 'Denso Haryana', logo: '/client-logos/denso.jpeg', location: 'Haryana' },
+    { name: 'Victura Technologies', logo: '/client-logos/victura-technologies.jpeg' },
+    { name: 'Sledge Hammer Cricket Academy', logo: '/client-logos/sledge-hammer-cricket-academy.jpeg' },
+    { name: 'Studds', logo: '/client-logos/studds.jpeg' },
+    { name: 'Tata Motors', logo: '/client-logos/tata-motors.jpeg' },
+    { name: 'Honda', logo: '/client-logos/honda.png' },
+    { name: 'Dipak Colour Lab', logo: '/client-logos/dipak-colour-lab.jpeg' },
+    { name: 'Joneja Bright Steels', logo: '/client-logos/joneja-bright-steels.jpeg' },
+    { name: 'Trado Adhesives and Chemicals Pvt. Ltd.', initials: 'TA' },
+    { name: 'Calista Salon & Academy', logo: '/client-logos/calista-salon-academy.jpeg', location: 'Ludhiana' },
+    { name: 'Sadhu Forging Limited', logo: '/client-logos/sadhu-forging-limited.png' },
+    { name: 'Falcon Cables', logo: '/client-logos/falcon-cables.jpeg', location: 'Faridabad' },
+    { name: 'Mahindra Defence Systems Limited', logo: '/client-logos/mahindra-defence.png' },
+    { name: 'Lubsa Multilab Systems Pvt. Ltd.', logo: '/client-logos/lubsa.png' },
+    { name: 'Kataria Electricals', initials: 'KE' },
+    { name: 'S J Rubber Industries Ltd.', logo: '/client-logos/sj-rubber.png' },
+    { name: 'Yo Life Projects Private Limited', initials: 'YL' },
+    { name: 'Techno Springs India Pvt. Ltd.', logo: '/client-logos/techno-springs-india.png' },
+    { name: 'HPA Madhuban', logo: '/client-logos/hpa-madhuban.jpeg' },
+    { name: 'Pioneer Services', initials: 'PS' },
+    { name: 'Many More', initials: '+' },
   ];
-
-  // Duplicate for infinite scroll
-  const allClients = [...clients, ...clients];
 
   return (
     <section id="clients" className="section-padding bg-gray-50">
@@ -653,22 +716,22 @@ function ClientsSection() {
             Trusted by Industry Leaders
           </h2>
           <p className="text-secondary-600 max-w-2xl mx-auto">
-            Serving many more reputed organizations across India.
+            Serving reputed manufacturing, automotive, steel, defence, retail, service, and lifestyle businesses across India.
           </p>
         </motion.div>
 
-        {/* Scrolling Logo Wall */}
-        <div className="overflow-hidden">
-          <div className="flex animate-scroll">
-            {allClients.map((client, index) => (
-              <div
-                key={index}
-                className="flex-shrink-0 w-48 h-24 mx-4 bg-white rounded-xl shadow-md flex items-center justify-center hover:shadow-lg transition-shadow"
-              >
-                <span className="font-semibold text-secondary-700 text-center px-4">{client}</span>
-              </div>
-            ))}
-          </div>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-5">
+          {clients.map((client, index) => (
+            <motion.div
+              key={client.name}
+              initial={{ opacity: 0, y: 18 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.03 }}
+            >
+              <ClientLogoCard {...client} />
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
