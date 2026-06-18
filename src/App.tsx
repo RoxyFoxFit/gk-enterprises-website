@@ -232,7 +232,7 @@ function AboutSection() {
           >
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img
-                src="https://images.pexels.com/photos/7679720/pexels-photo-7679720.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="/founder.jpeg"
                 alt="G.K. Enterprises Manufacturing"
                 className="w-full h-[400px] object-cover"
               />
