@@ -197,7 +197,7 @@ function AboutSection() {
             </h2>
             <p className="text-secondary-600 leading-relaxed mb-6">
               G.K. Enterprises is a Faridabad-based uniform manufacturing company led by{' '}
-              <strong className="text-secondary-900">Mr. Satnaam Singh Bagga</strong>. With years of experience in the garment and uniform industry, we provide customized uniform solutions tailored to the needs of businesses, industries, educational institutions, and organizations.
+              <strong className="text-secondary-900">Mr. Satnaam Singh Bagga & Mrs. Harpeet Kaur</strong>. With years of experience in the garment and uniform industry, we provide customized uniform solutions tailored to the needs of businesses, industries, educational institutions, and organizations.
             </p>
             <p className="text-secondary-600 leading-relaxed mb-8">
               Our commitment to quality, timely delivery, and customer satisfaction has made us a trusted uniform partner for numerous reputed companies across India. We specialize in manufacturing uniforms ranging from economical budget-friendly options to premium-grade materials.
@@ -1194,14 +1194,8 @@ function Footer() {
               Complete Uniform Solutions - From Budget-Friendly to Premium Corporate & Industrial Wear. Trusted uniform partner for industries across India.
             </p>
             <div className="flex gap-3">
-              <a href="#" className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-primary-500 transition-colors">
-                <Facebook size={18} />
-              </a>
-              <a href="#" className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-primary-500 transition-colors">
+              <a href="https://www.instagram.com/g.k.uniforms?igsh=MWVjYm8ybnh3b3c2eQ%3D%3D&utm_source=qr" className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-primary-500 transition-colors">
                 <Instagram size={18} />
-              </a>
-              <a href="#" className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-primary-500 transition-colors">
-                <Linkedin size={18} />
               </a>
               <a href="https://wa.me/919911730008" className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-green-500 transition-colors">
                 <MessageCircle size={18} />
