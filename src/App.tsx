@@ -765,6 +765,12 @@ function TestimonialsSection() {
       text: 'Excellent quality uniforms with perfect fitting and timely delivery. Highly satisfied with the service and professionalism. Would definitely recommend!',
       rating: 5,
     },
+    {
+      name: 'Vishal Gupta',
+      position: 'MD at Falcon Cables ',
+      text: 'Outstanding workmanship and attention to detail. The team delivered exactly what we needed and within the promised timeline.',
+      rating: 5,
+    },
 
   ];
 
