@@ -36,9 +36,11 @@ function Navigation() {
       <div className="section-container">
         <div className="flex items-center justify-between h-20">
           <a href="#home" className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-primary-500 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">GK</span>
-            </div>
+            <img
+              src="/gk-logo.png"
+              alt="G.K. Enterprises logo"
+              className="w-10 h-10 rounded-lg object-contain bg-white"
+            />
             <div className={`font-display font-bold text-xl ${isScrolled ? 'text-secondary-900' : 'text-white'}`}>
               G.K. Enterprises
             </div>
@@ -131,9 +133,7 @@ function HeroSection() {
             Trusted Uniform Partner Since Years
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white leading-tight mb-6">
-            India's Trusted Partner for{' '}
-            <span className="text-primary-400">Corporate, Industrial</span> &{' '}
-            <span className="text-primary-400">Institutional Uniforms</span>
+            Crafting Uniforms that build Identity{' '}
           </h1>
           <p className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">
             From budget-friendly workwear to premium executive uniforms, G.K. Enterprises delivers quality, comfort, durability, and customization under one roof.
@@ -1185,9 +1185,11 @@ function Footer() {
           {/* Company Info */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-primary-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">GK</span>
-              </div>
+              <img
+                src="/gk-logo.png"
+                alt="G.K. Enterprises logo"
+                className="w-10 h-10 rounded-lg object-contain bg-white"
+              />
               <span className="font-display font-bold text-xl">G.K. Enterprises</span>
             </div>
             <p className="text-gray-400 mb-4 text-sm leading-relaxed">
