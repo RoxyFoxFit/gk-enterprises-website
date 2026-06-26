@@ -8,7 +8,7 @@ import {
   Facebook, Instagram, Linkedin, ArrowRight, ChevronLeft, Quote, Send, ExternalLink
 } from 'lucide-react';
 
-const googleMapsLocationUrl = 'https://maps.app.goo.gl/zQd6gPAuQwaV2HRo6';
+const googleMapsLocationUrl = 'https://maps.app.goo.gl/y2Jh45EPhpCjdwq86';
 
 // Navigation Component
 function Navigation() {
@@ -977,8 +977,11 @@ function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-secondary-900 mb-1">Phone</h4>
-                  <a href="tel:+919911730008" className="text-primary-500 hover:text-primary-600">
+                  <a href="tel:+919911730008" className="text-primary-500 hover:text-primary-600 block">
                     +91 9911730008
+                  </a>
+                  <a href="tel:+919311620370" className="text-secondary-600 hover:text-primary-500 block">
+                    +91 9311620370
                   </a>
                 </div>
               </div>
@@ -1242,7 +1245,10 @@ function Footer() {
               </p>
               <p className="flex items-center gap-2">
                 <Phone className="text-primary-400" size={16} />
-                <a href="tel:+919911730008" className="hover:text-primary-400 transition-colors">+91 9911730008</a>
+                <span>
+                  <a href="tel:+919911730008" className="hover:text-primary-400 transition-colors block">+91 9911730008</a>
+                  <a href="tel:+919311620370" className="hover:text-primary-400 transition-colors block">+91 9311620370</a>
+                </span>
               </p>
               <p className="flex items-center gap-2">
                 <Mail className="text-primary-400" size={16} />
